@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    image: 127.0.0.1:5000/python-web:v2
+    build: .
+    ports:
+      - "8081:8000"
+  redis:
+    image: redis:alpine
+
