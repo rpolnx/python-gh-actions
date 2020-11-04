@@ -5,7 +5,14 @@
     {
       "dnsSearchDomains": null,
       "environmentFiles": null,
-      "logConfiguration": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+            "awslogs-group": "awslogs-python",
+            "awslogs-region": "sa-east-1",
+            "awslogs-stream-prefix": "python"
+        }
+    },
       "entryPoint": null,
       "portMappings": [
         {
