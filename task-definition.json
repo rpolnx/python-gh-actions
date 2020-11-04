@@ -11,7 +11,7 @@
         {
           "hostPort": 8080,
           "protocol": "tcp",
-          "containerPort": 800
+          "containerPort": 8000
         }
       ],
       "command": null,
@@ -75,7 +75,7 @@
   "requiresCompatibilities": [
     "EC2"
   ],
-  "networkMode": "awsvpc",
+  "networkMode": "host",
   "cpu": "256",
   "revision": 1,
   "status": "ACTIVE",
