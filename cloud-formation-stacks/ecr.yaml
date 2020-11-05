@@ -1,0 +1,21 @@
+Parameters:
+  ImageId:
+    Type: Number
+    Default: 901700424210
+
+Resources:
+  CreatingRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: "test-repository"
+      RepositoryPolicyText:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowPushPull
+            Effect: Allow
+            Principal:
+              AWS:
+                - !Ref ImageId
+            Action:
+              - "ecr:*"
+
